@@ -77,3 +77,19 @@ elif unit == "lbs":
 else:
     print(f"{unit}. is Invalid unit");
 '''
+
+
+
+#Ternaary Operator -> A single line if else statement 
+#                  -> Syntax -> variable = value1 if condition else value2
+#                 -> If the condition is True, the value1 is assigned to the variable else value2 is assigned to the variable
+#                -> Example -> result = "Pass" if marks >= 50 else "Fail"
+#              -> Example -> print("The number is even") if number % 2 == 0 else print("The number is odd")
+
+
+#example -> ternary operator to check if the number is even or odd
+'''
+number = int(input("Enter a number "));
+result = "The number is even" if number % 2 == 0 else "The number is odd";
+print(result);
+'''
