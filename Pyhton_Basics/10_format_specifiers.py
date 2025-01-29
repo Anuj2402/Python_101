@@ -31,3 +31,4 @@ print(f"price1 is ${price1:10}") #Price1: 3.14159 -> right align the value
 print(f"price1 is ${price1:<10}") #Price1: 3.14159 -> left align the value
 print(f"price1 is ${price1:^10}") #Price1: 3.14159 -> center the value
 print(f"price1 is ${price1:+}") #Price1: +3.14159 -> display the sign of the number
+
