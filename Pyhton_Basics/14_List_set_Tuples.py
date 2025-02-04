@@ -13,7 +13,7 @@ print(fruits[:4]); # -> This will print the elements from index 0 to index 3
 print("apple" in fruits); # -> This will check if the element is present in the list or not
 print(len(fruits)); # -> This will print the length of the list
 fruits.append("grapes"); # -> This will add the element to the end of the list
-print(help(fruits)); # -> This will print the help for the list
+# print(help(fruits)); # -> This will print the help for the list
 fruits.remove("banana"); # -> This will remove the element from the list
 print(fruits);
 fruits.pop(); # -> This will remove the last element from the list
@@ -33,7 +33,7 @@ print(example_tuple[2:5]); # -> This will print the elements from index 2 to ind
 print(example_tuple[:4]); # -> This will print the elements from index 0 to index 3
 print("apple" in example_tuple); # -> This will check if the element is present in the tuple or not
 print(len(example_tuple)); # -> This will print the length of the tuple
-print(help(example_tuple)); # -> This will print the help for the tuple
+# print(help(example_tuple)); # -> This will print the help for the tuple
 #example_tuple.append("grapes"); # -> This will add the element to the end of the tuple
 #example_tuple.remove("banana"); # -> This will remove the element from the tuple
 #example_tuple.pop(); # -> This will remove the last element from the tuple
@@ -70,4 +70,29 @@ example_set.clear(); # -> This will clear the set
 print(example_set);
 del example_set; # -> This will delete the set
 #print(example_set); # -> This will give an error because the set is deleted
+
+#Exercise-> Shopping cart program
+#Create a shopping cart program that takes the input from the user and adds the items to the cart
+
+foods = [];
+prices = [];
+total = 0;
+
+while True:
+    food_item = input("Enter the food item:(q to quit) "); 
+    if food_item.lower() == "q":
+        break;
+    else:
+        Price = float(input("Enter the price: "));
+        foods.append(food_item); #-> This will add the food item to the list
+        prices.append(Price); #-> This will add the price to the list
+        total += float(Price); #-> This will add the price to the total
+
+
+print("-------------Your Cart-----------------");
+
+for food in foods:
+    print(food, end = " ")
+
+print("\nyouTotal: ", total);
 
