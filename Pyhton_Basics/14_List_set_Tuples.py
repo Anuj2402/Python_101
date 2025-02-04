@@ -96,3 +96,97 @@ for food in foods:
 
 print("\nyouTotal: ", total);
 
+
+print('*' * 60);
+
+
+
+# 2D List -> A list inside a list
+# A 2D list is a list that contains other lists.
+# A 2D list is a list that contains one or more lists.
+'''
+fruits = ["apple", "banana", "cherry", "orange", "Kiwi" ];
+vegetables = ["carrot", "tomato", "potato", "onion", "cucumber"];
+meats = ["chicken", "beef", "mutton", "fish", "pork"];
+grocery = [fruits, vegetables, meats];
+print("Printing the list inside list i.e 2D List", grocery);
+print("Printing the first index of grocery which is a list indie a list ", grocery[0]); # -> This will print the first list
+print(grocery[1]); # -> This will print the second list
+print(grocery[2]); # -> This will print the third list
+print(grocery[0][1]); # -> This will print the second element of the first list
+print(grocery[1][2]); # -> This will print the third element of the second list
+
+grocery2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+print(grocery2); # -> This will print the list inside the list
+print(grocery2[0]); # -> This will print the first list
+print(grocery2[1]); # -> This will print the second list
+print(grocery2[2]); # -> This will print the third list
+print(grocery2[0][1]); # -> This will print the second element of the first list
+print(grocery2[1][2]); # -> This will print the third element of the second list
+print(grocery2[2][0]); # -> This will print the first element of the third list
+'''
+
+print('*'"2D Tuple" * 60);
+'''
+#2D Tuple
+#A 2D tuple is a tuple that contains other tuples.
+#A 2D tuple is a tuple that contains one or more tuples.
+
+num_pad = ((1, 2, 3), (4, 5, 6), (7, 8, 9));
+print(num_pad); # -> This will print the tuple inside the tuple
+
+#Printing the 2D tuple
+for row in num_pad:
+    for num in row:
+        print(num, end = " ");
+    print(); # -> This will print the new line after each row
+'''
+
+print("____________PYTHON QUIZ GAME _____________");
+
+#Quiz Game
+#Create a quiz game that asks the user questions and gives the user the score at the end of the quiz
+
+questions = ("How many elements are in the periodic table?",
+                "which animal lays the largest eggs?:", 
+                "what is the most abundant gas in the earth's atmosphere?",
+                 "How many bones are in the human body?",
+                  "which planet in the solar system is the hottest?");
+
+options = (("A. 118", "B. 120", "C. 119", "D. 121"),
+                 ("A. Ostrich", "B. Kiwi", "C. Emu", "D. Penguin"),
+                  ("A. Nitrogen", "B. Oxygen", "C. Carbon dioxide", "D. Hydrogen"),
+                   ("A. 206", "B. 208", "C. 210", "D. 212"),
+                    ("A. Mercury", "B. Venus", "C. Earth", "D. Mars"),
+                    ("A. 118", "B. 120", "C. 119", "D. 121"))
+
+answers = ("A", "A", "A", "A", "A"); # -> This will store the answers of the questions
+guesses = []; # -> This will store the guesses of the user
+score = 0; # -> This will store the score of the user
+question_num = 0; # -> This will store the question number
+
+for question in questions:
+    print("-------------------------------------");
+    print(question);
+    for option in options[question_num]:
+        print(option);
+    guess = input("Enter the answer: (A , B, C ,D) ").upper();
+    guesses.append(guess);
+    if guess == answers[question_num]:
+        score += 1;
+        print("Correct");
+    else:
+        print("Incorrect");
+        print(f"The correct answer is {answers[question_num]}");
+
+    question_num += 1; # -> This will increment the question number
+
+for answer in answers:
+    print(answer , end = " ");
+print();
+for guess in guesses:
+    print(guess, end = " ");
+print();
+
+
+print(f"Your score is {score} out of {len(questions)} and your percentage is {score/len(questions) * 100}%");
